@@ -1,0 +1,74 @@
+{
+  "keywords": {
+    "ru": [
+      "инфляция", "ставки", "крипта", "криптовалюта", "рынок",
+      "доллар", "нефть", "биткоин", "акции", "облигации",
+      "ФРС", "ЦБ", "рубль", "евро", "индекс", "рецессия",
+      "экономика", "бюджет", "дефицит", "санкции"
+    ],
+    "en": [
+      "inflation", "interest rate", "crypto", "cryptocurrency", "market",
+      "dollar", "oil", "bitcoin", "stocks", "bonds", "fed",
+      "central bank", "recession", "economy", "budget", "deficit",
+      "gdp", "cpi", "yield", "equity", "nasdaq", "sp500",
+      "ethereum", "defi", "fed rate", "monetary policy", "rate hike",
+      "rate cut", "treasury", "earnings", "ipo", "commodities"
+    ]
+  },
+  "sources": [
+    {
+      "id": "reuters_business",
+      "name": "Reuters Business",
+      "type": "rss",
+      "url": "https://feeds.reuters.com/reuters/businessNews",
+      "language": "en",
+      "enabled": true,
+      "priority": 1
+    },
+    {
+      "id": "reuters_finance",
+      "name": "Reuters Finance",
+      "type": "rss",
+      "url": "https://feeds.reuters.com/reuters/financialNews",
+      "language": "en",
+      "enabled": true,
+      "priority": 1
+    },
+    {
+      "id": "cnbc_finance",
+      "name": "CNBC Finance",
+      "type": "rss",
+      "url": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
+      "language": "en",
+      "enabled": true,
+      "priority": 2
+    },
+    {
+      "id": "cnbc_economy",
+      "name": "CNBC Economy",
+      "type": "rss",
+      "url": "https://www.cnbc.com/id/20910258/device/rss/rss.html",
+      "language": "en",
+      "enabled": true,
+      "priority": 2
+    },
+    {
+      "id": "coindesk",
+      "name": "CoinDesk",
+      "type": "rss",
+      "url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
+      "language": "en",
+      "enabled": true,
+      "priority": 2
+    },
+    {
+      "id": "ft_home",
+      "name": "Financial Times",
+      "type": "rss",
+      "url": "https://www.ft.com/rss/home/uk",
+      "language": "en",
+      "enabled": true,
+      "priority": 1
+    }
+  ]
+}

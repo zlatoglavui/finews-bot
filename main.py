@@ -38,7 +38,7 @@ logger.add(
 )
 
 # ── Проверка обязательных переменных перед стартом ────────────────────────
-REQUIRED_VARS = ["TELEGRAM_BOT_TOKEN", "TELEGRAM_CHANNEL_ID", "GEMINI_API_KEY"]
+REQUIRED_VARS = ["TELEGRAM_BOT_TOKEN", "TELEGRAM_CHANNEL_ID", "GROQ_API_KEY"]
 missing = [v for v in REQUIRED_VARS if not os.getenv(v)]
 if missing:
     logger.error(f"Отсутствуют обязательные переменные окружения: {missing}")

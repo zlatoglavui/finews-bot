@@ -16,7 +16,6 @@ from loguru import logger
 load_dotenv()
 
 # ── Создаём нужные папки при старте (Railway volume монтируется в runtime) ──
-Path("/app/data").mkdir(parents=True, exist_ok=True)
 Path("/app/logs").mkdir(parents=True, exist_ok=True)
 
 # ── Настройка логирования ──────────────────────────────────────────────────
@@ -38,7 +37,7 @@ logger.add(
 )
 
 # ── Проверка обязательных переменных перед стартом ────────────────────────
-REQUIRED_VARS = ["TELEGRAM_BOT_TOKEN", "TELEGRAM_CHANNEL_ID", "GROQ_API_KEY"]
+REQUIRED_VARS = ["TELEGRAM_BOT_TOKEN", "TELEGRAM_CHANNEL_ID", "GROQ_API_KEY", "DATABASE_URL"]
 missing = [v for v in REQUIRED_VARS if not os.getenv(v)]
 if missing:
     logger.error(f"Отсутствуют обязательные переменные окружения: {missing}")

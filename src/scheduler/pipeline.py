@@ -71,7 +71,7 @@ class NewsPipeline:
                 new_articles.append(a)
 
         # Подхватываем статьи pending (восстановленные из error)
-        pending = await self.db.get_articles_by_status("pending", limit=5)
+        pending = await self.db.get_articles_by_status("pending", limit=3)
         if pending:
             logger.info(f"Подхвачено {len(pending)} pending статей для обработки")
 

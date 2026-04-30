@@ -76,6 +76,17 @@ class Database:
             row = await conn.fetchrow("SELECT 1 FROM articles WHERE url = $1", url)
             return row is not None
 
+    def _parse_dt(self, value) -> datetime:
+        """Конвертирует строку ISO или datetime в datetime объект."""
+        if isinstance(value, datetime):
+            return value
+        if isinstance(value, str):
+            try:
+                return datetime.fromisoformat(value.replace("Z", "+00:00"))
+            except ValueError:
+                pass
+        return datetime.utcnow()
+
     async def insert_article(self, data: dict) -> Optional[int]:
         try:
             async with self._pool.acquire() as conn:
@@ -85,12 +96,12 @@ class Database:
                        VALUES ($1,$2,$3,$4,$5,$6)
                        ON CONFLICT (url) DO NOTHING
                        RETURNING id""",
-                    data.get("source_id","unknown"),
-                    data.get("title",""),
-                    data.get("url",""),
-                    data.get("raw_text",""),
-                    data.get("published", datetime.utcnow().isoformat()),
-                    data.get("status","pending"),
+                    data.get("source_id", "unknown"),
+                    data.get("title", ""),
+                    data.get("url", ""),
+                    data.get("raw_text", ""),
+                    self._parse_dt(data.get("published")),
+                    data.get("status", "pending"),
                 )
                 return row["id"] if row else None
         except Exception as e:

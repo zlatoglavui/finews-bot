@@ -12,7 +12,9 @@
       "central bank", "recession", "economy", "budget", "deficit",
       "gdp", "cpi", "yield", "equity", "nasdaq", "sp500",
       "ethereum", "defi", "fed rate", "monetary policy", "rate hike",
-      "rate cut", "treasury", "earnings", "ipo", "commodities"
+      "rate cut", "treasury", "earnings", "ipo", "commodities",
+      "gold", "silver", "hedge fund", "etf", "forex", "halving",
+      "altcoin", "solana", "ripple", "xrp", "stablecoin"
     ]
   },
   "sources": [
@@ -69,6 +71,51 @@
       "language": "en",
       "enabled": true,
       "priority": 1
+    },
+    {
+      "id": "cointelegraph",
+      "name": "CoinTelegraph",
+      "type": "rss",
+      "url": "https://cointelegraph.com/rss",
+      "language": "en",
+      "enabled": true,
+      "priority": 2
+    },
+    {
+      "id": "decrypt",
+      "name": "Decrypt",
+      "type": "rss",
+      "url": "https://decrypt.co/feed",
+      "language": "en",
+      "enabled": true,
+      "priority": 3
+    },
+    {
+      "id": "yahoo_finance",
+      "name": "Yahoo Finance",
+      "type": "rss",
+      "url": "https://finance.yahoo.com/news/rssindex",
+      "language": "en",
+      "enabled": true,
+      "priority": 2
+    },
+    {
+      "id": "marketwatch",
+      "name": "MarketWatch",
+      "type": "rss",
+      "url": "https://feeds.content.dowjones.io/public/rss/mw_realtimeheadlines",
+      "language": "en",
+      "enabled": true,
+      "priority": 2
+    },
+    {
+      "id": "investing_news",
+      "name": "Investing.com",
+      "type": "rss",
+      "url": "https://www.investing.com/rss/news.rss",
+      "language": "en",
+      "enabled": true,
+      "priority": 2
     }
   ]
 }
